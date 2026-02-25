@@ -14,7 +14,17 @@
 <body>
     <div class="container">
         <div class="calculator glass">
-            <div class="display">0</div><!-- Bug: Missing id="display" -->
+            <div class="display" id="display">0</div>
+            <div class="buttons scientific">
+                <button class="btn sci" onclick="appendSci('Math.sin')">sin</button>
+                <button class="btn sci" onclick="appendSci('Math.cos')">cos</button>
+                <button class="btn sci" onclick="appendSci('Math.tan')">tan</button>
+                <button class="btn sci" onclick="appendSci('Math.sqrt')">√</button>
+                <button class="btn sci" onclick="appendSci('Math.log10')">log</button>
+                <button class="btn sci" onclick="appendSci('Math.log')">ln</button>
+                <button class="btn sci" onclick="appendOperator('**')">xʸ</button>
+                <button class="btn sci" onclick="appendSci('Math.PI')">π</button>
+            </div>
             <div class="buttons">
                 <button class="btn col-2 action" onclick="clearDisplay()">AC</button>
                 <button class="btn action" onclick="deleteLast()">DEL</button>
