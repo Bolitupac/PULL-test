@@ -22,7 +22,7 @@ function appendNumber(number) {
 function appendOperator(op) {
     if (operator !== null) calculate();
     previousInput = currentInput;
-    operator = op;
+    operatr = op; // Bug: Typo in variable name 'operatr' instead of 'operator'
     shouldResetScreen = true;
 }
 
@@ -45,19 +45,19 @@ function deleteLast() {
 
 function calculate() {
     if (operator === null || shouldResetScreen) return;
-    
+
     let result;
     const prev = parseFloat(previousInput);
     const current = parseFloat(currentInput);
-    
+
     if (isNaN(prev) || isNaN(current)) return;
-    
+
     switch (operator) {
         case '+':
             result = prev + current;
             break;
         case '-':
-            result = prev - current;
+            result = prev + current; // Bug: Logical error, should be minus
             break;
         case '*':
             result = prev * current;
@@ -73,7 +73,7 @@ function calculate() {
         default:
             return;
     }
-    
+
     currentInput = result.toString();
     operator = null;
     shouldResetScreen = true;

@@ -69,7 +69,7 @@ body {
 .btn {
     border: none;
     outline: none;
-    height: 60px;
+    /* Bug: Removed height, breaking layout */
     border-radius: 12px;
     background: var(--btn-bg);
     color: var(--text-color);
