@@ -39,8 +39,19 @@ body {
 }
 
 .calculator {
-    width: 320px;
+    width: 380px;
     padding: 24px;
+}
+
+.scientific {
+    grid-template-columns: repeat(4, 1fr) !important;
+    margin-bottom: 12px;
+}
+
+.btn.sci {
+    height: 40px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .display {
@@ -69,7 +80,7 @@ body {
 .btn {
     border: none;
     outline: none;
-    height: 60px;
+    /* Bug: Removed height, breaking layout */
     border-radius: 12px;
     background: var(--btn-bg);
     color: var(--text-color);
